@@ -18,15 +18,13 @@ public class TaskController {
         return service.saveTask(task);
     }
 
-    @GetMapping("/{id}")
     public List<Task> findAllTasks(@PathVariable int id) {
         return service.getTasks();
     }
 
-
-    @GetMapping()
-    public List<Task> findById() {
-        return service.getTasks();
+    @GetMapping("/{id}")
+    public Task findById(@PathVariable int id) {
+        return service.getTask(id);
     }
 
 
