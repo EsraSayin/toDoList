@@ -18,10 +18,6 @@ public class TaskGroupController {
         return service.saveTaskGroup(task);
     }
 
-    public List<TaskGroup> findAllTasks(@PathVariable int id) {
-        return service.getTaskGroups();
-    }
-
     @GetMapping("/{id}")
     public TaskGroup findById(@PathVariable int id) {
         return service.getTaskGroup(id);

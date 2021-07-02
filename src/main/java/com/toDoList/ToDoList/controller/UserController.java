@@ -18,10 +18,6 @@ public class UserController {
         return service.saveUser(user);
     }
 
-    public List<User> findAllTasks(@PathVariable int id) {
-        return service.getUsers();
-    }
-
     @GetMapping("/{id}")
     public User findById(@PathVariable int id) {
         return service.getUser(id);
