@@ -14,8 +14,10 @@ import java.util.List;
 @Entity
 @Table(name = "task_group")
 public class TaskGroup {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "task_group_id")
     private int id;
 
     @OneToMany(cascade = CascadeType.ALL,
@@ -25,7 +27,7 @@ public class TaskGroup {
 
     @ManyToOne(fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user")
     @JsonIgnore
     private User users;
 }
