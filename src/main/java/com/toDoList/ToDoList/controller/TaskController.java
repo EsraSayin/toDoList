@@ -8,23 +8,35 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/task")
 public class TaskController {
     @Autowired
     private TaskService service;
-    @PostMapping("/addTask")
-    public Task addTask(@RequestBody Task task){
+
+    @PostMapping
+    public Task addTask(@RequestBody Task task) {
         return service.saveTask(task);
     }
-    @PostMapping("/Tasks")
-    public List <Task> findAllTasks(){
-        return service.getTask();
+
+    @GetMapping("/{id}")
+    public List<Task> findAllTasks(@PathVariable int id) {
+        return service.getTasks();
     }
-    @PutMapping ("/updateTask")
-    public Task updateTask(@RequestBody Task task){
+
+
+    @GetMapping()
+    public List<Task> findById() {
+        return service.getTasks();
+    }
+
+
+    @PutMapping()
+    public Task updateTask(@RequestBody Task task) {
         return service.updateTask(task);
     }
-    @DeleteMapping ("/delete/{id}")
-    public String deleteTask(@PathVariable int id){
+
+    @DeleteMapping("/{id}")
+    public String deleteTask(@PathVariable int id) {
         return service.deleteTask(id);
     }
 

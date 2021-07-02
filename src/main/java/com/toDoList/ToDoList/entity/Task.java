@@ -20,5 +20,5 @@ public class Task {
     private int id;
     private String name;
     private String description;
-    private String situation;
+    private String state;
 }

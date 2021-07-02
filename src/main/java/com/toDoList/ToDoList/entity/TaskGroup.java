@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="TaskGroup_TABLE")
+@Table(name = "TaskGroup_TABLE")
 public class TaskGroup {
     @Id
     @GeneratedValue
