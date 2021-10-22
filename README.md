@@ -1,5 +1,17 @@
 # TodoList Project
 This project is oriented to create a TODO task list for a specific user.
+##Installing
+This project's database created by using Docker. Write ``docker-compose up`` to install it.
+After that, reach to ``http://localhost:8080`` and authenticate adminer panel to create database.
+(Username: root,
+Password: password)
+
+
+SQL Command : ``CREATE DATABASE task;``
+
+
+Installation of database done, use the Postman or similar tool to test functionality.
+ 
 
 ## Examples
 
